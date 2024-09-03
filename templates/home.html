@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is home page</h1>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Creation year</th>
+            <th>Sport</th>
+            <th>Coach</th>
+            <th>Owner</th>
+        </thead>
+        <tbody>
+            {% for team in team %}
+                <tr>
+                    <td> {{ team.name }} </td>
+                    <td> {{ team.creation_year }} </td>
+                    <td> {{ team.get_sport_display }} </td>
+                    <td> {{ team.coach }} </td>
+                    <td> {{ team.owner }} </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
